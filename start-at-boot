@@ -1,0 +1,7 @@
+mako
+waybar?
+fcitx5 --disable notificationitem
+swaybg -i file -m fill
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+ghelper
+udiskie -s
