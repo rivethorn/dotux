@@ -66,6 +66,11 @@ return {
   },
 
   {
+    "xiyaowong/transparent.nvim",
+    lazy = false,
+  },
+
+  {
     "snacks.nvim",
     opts = {
       dashboard = {
