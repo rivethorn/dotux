@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+here="$(pwd)"
+
+mv ~/.bashrc ~/.bashrc.bak
+mv ~/.inputrc ~/.inputrc.bak
+mv ~/.config/hypr ~/.config/hypr.bak
+mv ~/.config/kitty ~/.config/kitty.bak
+mv ~/.config/nvim ~/.config/nvim.bak
+mv ~/.config/waybar ~/.config/waybar.bak
+
+ln -s "$here/bash/.bashrc" ~/.bashrc
+ln -s "$here/bash/.inputrc" ~/.inputrc
+ln -s "$here/hypr" ~/.config/hypr
+ln -s "$here/kitty" ~/.config/kitty
+ln -s "$here/nvim" ~/.config/nvim
+ln -s "$here/scripts/get-touchpad-device" ~/.local/bin/get-touchpad-device
+ln -s "$here/scripts/toggle-touchpad" ~/.local/bin/toggle-touchpad
+ln -s "$here/scripts/waybar-runner.py" ~/.local/bin/waybar-runner.py
+ln -s "$here/walls" ~/.config/walls
+ln -s "$here/waybar" ~/.config/waybar
+ln -s "$here/starship.toml" ~/.config/starship.toml

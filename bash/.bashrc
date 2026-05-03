@@ -2,12 +2,13 @@
 
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.cargo/bin
+export PATH=$PATH:$HOME/.config/emacs/bin
 export EDITOR='nvim'
 
 # Aliases
 
 # File system
-if command -v eza &> /dev/null; then
+if command -v eza &>/dev/null; then
   alias l='eza -lh  --icons=auto'                                        # long list
   alias ls='eza -1   --icons=auto'                                       # short list
   alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
@@ -22,7 +23,7 @@ alias ....='cd ../../..'
 
 # Tools
 alias t='tmux attach || tmux new -s Work'
-n() { if [ "$#" -eq 0 ]; then command nvim . ; else command nvim "$@"; fi; }
+n() { if [ "$#" -eq 0 ]; then command nvim .; else command nvim "$@"; fi; }
 
 # Git
 alias g='git'
@@ -41,10 +42,10 @@ else
 fi
 alias eff='$EDITOR "$(ff)"'
 
-if command -v zoxide &> /dev/null; then
+if command -v zoxide &>/dev/null; then
   alias cd="zd"
   zd() {
-    if (( $# == 0 )); then
+    if (($# == 0)); then
       builtin cd ~ || return
     elif [[ -d $1 ]]; then
       builtin cd "$1" || return
@@ -64,6 +65,8 @@ open() (
   xdg-open "$@" >/dev/null 2>&1 &
 )
 
+alias 95="cliamp https://stream.revma.ihrhls.com/zc857.m3u"
+
 # Functions
 
 # Yazi function
@@ -76,17 +79,17 @@ function y() {
 }
 
 # Init Starship
-if [[ $- == *i* ]] && [[ ${TERM:-} != "dumb" ]] && command -v starship &> /dev/null; then
+if [[ $- == *i* ]] && [[ ${TERM:-} != "dumb" ]] && command -v starship &>/dev/null; then
   eval "$(starship init bash)"
 fi
 
 # Init Zoxide
-if command -v zoxide &> /dev/null; then
+if command -v zoxide &>/dev/null; then
   eval "$(zoxide init bash)"
 fi
 
 # FZF auto-completion
-if command -v fzf &> /dev/null; then
+if command -v fzf &>/dev/null; then
   if [[ -f /usr/share/fzf/completion.bash ]]; then
     source /usr/share/fzf/completion.bash
   fi
@@ -97,3 +100,8 @@ fi
 
 # Activate Ble.sh
 source -- ~/.local/share/blesh/ble.sh
+
+. "$HOME/.atuin/bin/env"
+
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+eval "$(atuin init bash)"

@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+STATE_FILE="$HOME/.local/state/touchpad-disabled"
+
+device="$(get-touchpad-device)"
+
+if [[ -z $device ]]; then
+  echo "No touchpad device found" >&2
+  exit 1
+fi
+
+enable() {
+  hyprctl keyword "device[$device]:enabled" true >/dev/null
+  rm -f "$STATE_FILE"
+  dms ipc call toast info "Touchpad Enabled"
+}
+
+disable() {
+  hyprctl keyword "device[$device]:enabled" false >/dev/null
+  mkdir -p "$(dirname "$STATE_FILE")"
+  printf 'device {\n    name = %s\n    enabled = false\n}\n' "$device" >"$STATE_FILE"
+  dms ipc call toast info "Touchpad Disabled"
+}
+
+case "${1:-toggle}" in
+on) enable ;;
+off) disable ;;
+toggle) if [[ -f $STATE_FILE ]]; then enable; else disable; fi ;;
+startup) if [[ -f $STATE_FILE ]]; then disable; fi ;;
+esac
