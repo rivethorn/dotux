@@ -105,3 +105,5 @@ source -- ~/.local/share/blesh/ble.sh
 
 [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
 eval "$(atuin init bash)"
+
+source /home/rivethorn/.config/broot/launcher/bash/br
