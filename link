@@ -9,6 +9,8 @@ mv ~/.config/kitty ~/.config/kitty.bak
 mv ~/.config/nvim ~/.config/nvim.bak
 mv ~/.config/waybar ~/.config/waybar.bak
 
+mkdir -p ~/.local/bin
+
 ln -s "$here/bash/.bashrc" ~/.bashrc
 ln -s "$here/bash/.inputrc" ~/.inputrc
 ln -s "$here/hypr" ~/.config/hypr
