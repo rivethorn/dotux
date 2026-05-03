@@ -8,6 +8,7 @@ mv ~/.config/hypr ~/.config/hypr.bak
 mv ~/.config/kitty ~/.config/kitty.bak
 mv ~/.config/nvim ~/.config/nvim.bak
 mv ~/.config/waybar ~/.config/waybar.bak
+mv ~/.config/cliamp ~/.config/cliamp.bak
 
 mkdir -p ~/.local/bin
 
@@ -21,4 +22,5 @@ ln -s "$here/scripts/toggle-touchpad" ~/.local/bin/toggle-touchpad
 ln -s "$here/scripts/waybar-runner.py" ~/.local/bin/waybar-runner.py
 ln -s "$here/walls" ~/.config/walls
 ln -s "$here/waybar" ~/.config/waybar
+ln -s "$here/cliamp" ~/.config/cliamp
 ln -s "$here/starship.toml" ~/.config/starship.toml

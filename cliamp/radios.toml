@@ -1,0 +1,11 @@
+[[station]]
+name = "Rock 95.5"
+url = "https://stream.revma.ihrhls.com/zc857.m3u"
+
+[[station]]
+name = "Lo-Fi Hunter"
+url = "https://live.hunter.fm/lofi_high"
+
+[[station]]
+name = "LautFM Lo-Fi"
+url = "https://lofi.stream.laut.fm/lofi"

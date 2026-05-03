@@ -1,0 +1,5 @@
+theme = "gruvbox"
+
+visualizer = "Retro"
+eq_preset = "Custom"
+eq = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
