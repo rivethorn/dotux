@@ -10,16 +10,18 @@ if [[ -z $device ]]; then
 fi
 
 enable() {
-  hyprctl keyword "device[$device]:enabled" true >/dev/null
+  # hyprctl keyword "device[$device]:enabled" true >/dev/null
+  hyprctl eval "hl.device({name = '$device', enabled = true,})" >/dev/null
   rm -f "$STATE_FILE"
-  dms ipc call toast info "Touchpad Enabled"
+  notify-send "Touchpad Enabled"
 }
 
 disable() {
-  hyprctl keyword "device[$device]:enabled" false >/dev/null
+  # hyprctl keyword "device[$device]:enabled" false >/dev/null
+  hyprctl eval "hl.device({name = '$device', enabled = false,})" >/dev/null
   mkdir -p "$(dirname "$STATE_FILE")"
   printf 'device {\n    name = %s\n    enabled = false\n}\n' "$device" >"$STATE_FILE"
-  dms ipc call toast info "Touchpad Disabled"
+  notify-send "Touchpad Disabled"
 }
 
 case "${1:-toggle}" in
