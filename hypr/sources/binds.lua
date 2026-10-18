@@ -1,8 +1,8 @@
 local mainMod = "SUPER"
 local runner = "vicinae"
 local terminal = "kitty"
-local browser = "chromium"
-local fileManager = "nautilus"
+local browser = "google-chrome-stable"
+local fileManager = "maia"
 
 for i = 1, 10 do
 	local key = i % 10 -- 10 maps to key 0

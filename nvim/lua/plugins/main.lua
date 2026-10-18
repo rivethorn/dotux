@@ -12,28 +12,26 @@ return {
   },
 
   {
-    "tpope/vim-commentary",
+    "tribela/transparent.nvim",
+    event = "VimEnter",
+    config = true,
+    enabled = true,
   },
 
-  {
-    "xiyaowong/transparent.nvim",
-    lazy = false,
-  },
+  "tpope/vim-commentary",
+
+  "eandrju/cellular-automaton.nvim",
+
+  "Djancyp/better-comments.nvim",
+
+  -- "preservim/nerdtree",
+
+  "kosayoda/nvim-lightbulb",
 
   {
-    "snacks.nvim",
+    "j-hui/fidget.nvim",
     opts = {
-      dashboard = {
-        enabled = false,
-      },
-      scroll = {
-        enabled = false,
-      },
+      -- options
     },
-  },
-
-  {
-    "folke/noice.nvim",
-    enabled = false,
   },
 }
