@@ -1,16 +1,16 @@
 hl.config({
 	general = {
-		gaps_in = 6,
-		gaps_out = 12,
-		border_size = 1,
+		gaps_in = 5,
+		gaps_out = 10,
+		border_size = 3,
 
 		layout = "dwindle",
 
 		allow_tearing = true,
 
 		col = {
-			active_border = "rgba(e78a4eff)",
-			inactive_border = "rgba(3c333bff)",
+			active_border = "rgba(c48282dd)",
+			inactive_border = "rgba(606079bb)",
 		},
 	},
 
@@ -25,6 +25,12 @@ hl.config({
 	decoration = {
 		dim_inactive = true,
 		dim_strength = 0.2,
+		active_opacity = 0.94,
+        inactive_opacity = 0.9,
+        blur = {
+            passes = 2,
+            noise = 0.2,
+        },
 	},
 
 	misc = {

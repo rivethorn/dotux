@@ -2,7 +2,7 @@
     "reload_style_on_change": true,
     "layer": "top",
     "position": "top",
-    "spacing": 0,
+    "spacing": 6,
     "height": 26,
     "modules-left": [
         "hyprland/workspaces",
@@ -21,6 +21,8 @@
         "custom/separator",
         "network",
         "custom/separator",
+        "backlight",
+        "custom/separator",
         "pulseaudio",
         "custom/separator",
         "cpu",
@@ -30,15 +32,24 @@
         "battery"
     ],
     "custom/separator": {
-        "format": " | ",
+        "format": "|",
         "tooltip": false
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-icons": [
+            "󰃞",
+            "󰃟",
+            "󰃠"
+        ]
     },
     "hyprland/window": {
         "format": " {}",
         "max-length": 60
     },
     "hyprland/language": {
-        "format": "  {}",
+        "format": " {}",
         "format-en": "EN",
         "format-fa": "FA",
         "keyboard-name": "at-translated-set-2-keyboard"
@@ -77,7 +88,7 @@
     },
     "memory": {
         "interval": 2,
-        "format": "  {used:0.1f} GB",
+        "format": " {used:0.1f} GB",
         "tooltip-format": "RAM: {used:0.1f} / {total:0.1f} GB ({percentage}%)"
     },
     "clock": {
@@ -94,7 +105,7 @@
             "󰤨"
         ],
         "format": "{essid}",
-        "format-wifi": "{icon}  {essid}",
+        "format-wifi": "{icon} {essid}",
         "format-ethernet": "󰀂",
         "format-disconnected": "󰤮",
         "tooltip-format-wifi": "{essid} ({frequency} GHz)",
@@ -150,7 +161,7 @@
         "format": "",
         "format-off": "󰂲",
         "format-disabled": "󰂲",
-        "format-connected": "󰂱",
+        "format-connected": "󰂱 ",
         "format-no-controller": "",
         "tooltip-format": "Devices connected: {num_connections}",
         "on-click": "kitty bluetui"
@@ -161,19 +172,20 @@
         "on-click-right": "pamixer -t",
         "tooltip-format": "Playing at {volume}%",
         "scroll-step": 5,
-        "format-muted": "",
+        "format-muted": " ",
         "format-icons": {
             "headphone": "",
             "headset": "",
             "default": [
                 "",
                 "",
+                "",
                 ""
             ]
         }
     },
     "tray": {
-        "icon-size": 15,
-        "spacing": 17
+        "icon-size": 16,
+        "spacing": 10
     }
 }

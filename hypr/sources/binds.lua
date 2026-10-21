@@ -19,6 +19,7 @@ hl.bind(mainMod .. " + P", hl.dsp.exec_cmd(runner .. " vicinae://launch/clipboar
 hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd(runner .. " vicinae://launch/power"))
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("sh -c waybar-runner.py"))
 hl.bind(mainMod .. " + SHIFT + T", hl.dsp.exec_cmd("sh -c toggle-touchpad"))
+hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd("hyprpicker -a -n"))
 
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
@@ -66,5 +67,5 @@ hl.bind(
 	hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),
 	{ locked = true, repeating = true }
 )
-hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"), { locked = true, repeating = true })
-hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"), { locked = true, repeating = true })
+hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5+"), { locked = true, repeating = true })
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5-"), { locked = true, repeating = true })

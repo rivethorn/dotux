@@ -21,7 +21,7 @@ return {
             enable_inlay_hints_implicit_return = true,
             enable_inlay_hints_optional_result = true,
           },
-          cmd = { "/opt/homebrew/bin/ols" }, -- if needed
+          cmd = { "/usr/bin/ols" }, -- if needed
           init_options = {
             -- Example collections (adjust to your setup)
             -- collections = {

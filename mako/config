@@ -5,11 +5,11 @@ outer-margin=20
 padding=10,15
 border-size=2
 max-icon-size=32
-font=sans-serif 14px
+font=CaskaydiaCove Nerd Font 14px
 
-text-color=#d4be98
-border-color=#7daea3
-background-color=#282828
+text-color=#cdcdcd
+border-color=#c48282
+background-color=#171617
 
 [urgency=critical]
 default-timeout=0

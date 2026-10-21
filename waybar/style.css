@@ -1,5 +1,5 @@
-@define-color foreground #e2cca9;
-@define-color background #1d2021;
+@define-color foreground #cdcdcd;
+@define-color background #141415;
 
 * {
   /* background-color: @background; */
@@ -8,8 +8,8 @@
   /* border: none; */
   /* border-radius: 0; */
   /* min-height: 0; */
-  font-family: "IosevkaTerm Nerd Font";
-  font-weight: bold;
+  font-family: "CaskaydiaCove Nerd Font";
+  font-weight: 600;
   font-size: 14px;
 }
 
@@ -36,7 +36,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-  color: rgba(176, 184, 70, 0.8);
+  color: #7fa563;
 }
 
 #workspaces button.empty {
@@ -44,11 +44,11 @@ window#waybar {
 }
 
 #workspaces button.empty.active {
-  color: #e9b143;
+  opacity: 0.60;
 }
 
 #custom-separator {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 #cpu,
