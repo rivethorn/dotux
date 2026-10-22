@@ -10,7 +10,8 @@
         "hyprland/window"
     ],
     "modules-center": [
-        "clock"
+        "clock",
+        "custom/mediaplayer"
     ],
     "modules-right": [
         "tray",
@@ -81,6 +82,13 @@
         "on-scroll-up": "hyprctl dispatch workspace e-1",
         "on-scroll-down": "hyprctl dispatch workspace e+1"
     },
+    "custom/mediaplayer": {
+        "exec": "python ~/.config/waybar/mediaplayer.py",
+        "format": "| {}",
+        "return-type": "json",
+        "on-click": "playerctl play-pause",
+        "max-length": 35
+    },
     "cpu": {
         "interval": 2,
         "format": "󰍛 {usage}%",
@@ -106,8 +114,8 @@
         ],
         "format": "{essid}",
         "format-wifi": "{icon} {essid}",
-        "format-ethernet": "󰀂",
-        "format-disconnected": "󰤮",
+        "format-ethernet": "󰀂 ",
+        "format-disconnected": "󰤮 ",
         "tooltip-format-wifi": "{essid} ({frequency} GHz)",
         "tooltip-format-ethernet": "Connected",
         "tooltip-format-disconnected": "Disconnected",
