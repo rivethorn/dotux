@@ -176,7 +176,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "vague",
+      colorscheme = "gruvbox-material",
     },
   },
 }
